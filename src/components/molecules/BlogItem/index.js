@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const BlogItem = (props) => {
     const navigate = useNavigate();
-    const { image, title, name, date, body, _id, onDelete } = props;
+    const { image, title, name, date, body, _id } = props;
     return (
         <div className="blog-item">
             <img className="image-thumb" src={image} alt="post" />
