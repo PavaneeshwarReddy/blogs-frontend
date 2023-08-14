@@ -32,7 +32,7 @@ const Home = () => {
         {dataBlog.map(blog => {
           return <BlogItem
             key={blog._id}
-            image={`http://localhost:4000/${blog.image}`}
+            image={`https://blogpost-backend.onrender.com/${blog.image}`}
             title={blog.title}
             body={blog.body}
             name={blog.author.name}

@@ -10,7 +10,7 @@ function SearchBlog() {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
     try {
-      const response = await axios.get(`http://localhost:4000/v1/blog/posts?search=${term}`);
+      const response = await axios.get(`https://blogpost-backend.onrender.com/v1/blog/posts?search=${term}`);
       const results = response.data;
       setSearchResults(results);
     } catch (error) {

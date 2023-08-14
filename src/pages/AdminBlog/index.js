@@ -36,7 +36,7 @@ const AdminBlog = () => {
                 {
                     label: 'Yes',
                     onClick: () => {
-                        Axios.delete(`http://localhost:4000/v1/blog/post/${id}`)
+                        Axios.delete(`https://blogpost-backend.onrender.com/v1/blog/post/${id}`)
                             .then(res => {
                                 console.log('success delete: ', res.data);
                                 dispatch(setDataBlog(counter))
@@ -64,7 +64,7 @@ const AdminBlog = () => {
                 {dataBlog.map(blog => {
                     return <BlogAdmin
                         key={blog._id}
-                        image={`http://localhost:4000/${blog.image}`}
+                        image={`https://blogpost-backend.onrender.com/${blog.image}`}
                         title={blog.title}
                         _id={blog._id}
                         onDelete={confirmDelete}

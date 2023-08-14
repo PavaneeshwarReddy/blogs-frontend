@@ -11,7 +11,7 @@ const DetailBlog = () => {
     const [data, setData] = useState({});
 
     useEffect(() => {
-        Axios.get(`http://localhost:4000/v1/blog/post/${id}`)
+        Axios.get(`https://blogpost-backend.onrender.com/v1/blog/post/${id}`)
             .then(res => {
                 setData(res.data.data)
             })
@@ -25,7 +25,7 @@ const DetailBlog = () => {
             <div className="detail-blog-wrapper">
                  <Gap height={40} />
                 <Link title="Back to Home" onClick={() => navigate('/')} />
-                <img className="img-cover" src={`http://localhost:4000/${data.image}`} alt="thumb" />
+                <img className="img-cover" src={`https://blogpost-backend.onrender.com/${data.image}`} alt="thumb" />
                 <p className="blog-title">{data.title}</p>
                 <p className="blog-author">{data.author.name} - {data.createdAt}</p>
                 <p className="blog-body">{data.body}</p>

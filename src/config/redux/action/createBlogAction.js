@@ -14,7 +14,7 @@ export const postToApi = (form) => {
     data.append('body', form.body);
     data.append('image', form.image);
 
-    Axios.post('http://localhost:4000/v1/blog/post', data, {
+    Axios.post('https://blogpost-backend.onrender.com/v1/blog/post', data, {
         headers: {
             'content-type': 'multipart/form-data'
         }
@@ -33,7 +33,7 @@ export const updateToApi = (form, id) => {
     data.append('body', form.body);
     data.append('image', form.image);
 
-    Axios.put(`http://localhost:4000/v1/blog/post/${id}`, data, {
+    Axios.put(`https://blogpost-backend.onrender.com/v1/blog/post/${id}`, data, {
         headers: {
             'content-type': 'multipart/form-data'
         }
