@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin:10px;
+
+    height: 64px;
+    padding: 0 16px;
+    // border-bottom: 1px solid gray;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    .logo-app {
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        cursor: pointer;
+        color: black;
+    }
+
+    .menu-item {
+        color: black;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        justify-content: right;
+        padding: 0px 100px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+       
+
+        &:hover {
+            color: orange;
+        }
+    }
+
+}
